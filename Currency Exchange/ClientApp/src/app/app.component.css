@@ -1,0 +1,33 @@
+.currency-exchange-title {
+  text-align: center;
+}
+
+.current-date {
+  text-align: center;
+}
+
+.add-currency-button-div {
+  text-align: center;
+  margin-top: 20px;
+}
+.add-currency-button {
+  height: 100px;
+  width: 200px;
+  font-size: 25px;
+}
+
+.mat-grid-tile {
+  background: #C6C6C6;
+}
+
+.exchange-rate-base {
+  background: lightblue;
+}
+
+  mat-grid-tile {
+    border-style: solid;
+  }
+
+.amount-imput {
+  background-color: white;
+}

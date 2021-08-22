@@ -1,0 +1,17 @@
+.add-currency-button-div {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal-body {
+  height: 400px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.add-currency-button {
+  height: 100px;
+  width: 200px;
+  font-size: 25px;
+  background-color: mediumaquamarine;
+}

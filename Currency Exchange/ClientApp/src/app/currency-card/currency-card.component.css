@@ -1,0 +1,12 @@
+.primary {
+  background-color: coral;
+}
+
+.accent {
+  background-color: mediumaquamarine;
+}
+
+.exchange-rate-button-container {
+  text-align: center;
+  margin-top: 5px;
+}

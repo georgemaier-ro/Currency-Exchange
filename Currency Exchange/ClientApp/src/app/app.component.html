@@ -1,0 +1,22 @@
+<h1 class="currency-exchange-title">Currency Exchange</h1>
+<h2 class="current-date">{{exchangeData.date}}</h2>
+<body>
+  <div>
+    <mat-grid-list cols="4" rowHeight="2:1">
+      <mat-grid-tile class="exchange-rate-base">
+        {{exchangeData.base}} = {{getFullName(exchangeData.base)}}
+        <mat-form-field appearance="fill" floatLabel="always">
+          <input (keyup)="onKey($event)" matInput type="number" class="amount-imput" placeholder="1">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile *ngFor="let exchangeRate of exchangeRates | keyvalue" [ngClass]="{'exchange-rate-base' : exchangeBase == exchangeRate.key}">
+        1 {{exchangeData.base}} = {{exchangeRate.value}} {{exchangeRate.key}}
+        <mat-label>{{exchangeRate.key}} = {{getFullName(exchangeRate.key)}}</mat-label>
+        <mat-form-field appearance="fill" floatLabel="always">
+          <input matInput type="number" class="amount-imput" value="{{calculateRate(amount, convertRatesToNumbers(exchangeRate.value))}}">
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <ngbd-modal-basic [exchangeCountries] ="exchangeSymbols"></ngbd-modal-basic>
+</body>

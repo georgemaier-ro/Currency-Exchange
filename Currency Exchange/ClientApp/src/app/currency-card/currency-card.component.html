@@ -1,0 +1,5 @@
+<mat-card>
+  <button mat-raised-button class="exchange-rate" (click)="enableDisableRule()"
+          [ngClass]="{'primary' : toggle, 'accent': !toggle}">{{exchangeShort}} - {{exchangeLong}}
+  </button>
+</mat-card>
